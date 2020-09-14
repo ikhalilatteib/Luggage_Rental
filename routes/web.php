@@ -23,7 +23,6 @@ Route::get('/fixe','\App\Http\Controllers\NewController@fixepage')->name('layout
 
 Route::get('/login','\App\Http\Controllers\LoginController@loginView');
 Route::post('/giris','\App\Http\Controllers\LoginController@login');
-Route::get('/create','\App\Http\Controllers\NewController@createcompte');
 Route::post('/success','\App\Http\Controllers\NewController@create');
 Route::get('list','\App\Http\Controllers\NewController@liste');
 Route::get('/guncelle/{id}','\App\Http\Controllers\NewController@updateView')->where(array('id'=>'[0-9]+'));

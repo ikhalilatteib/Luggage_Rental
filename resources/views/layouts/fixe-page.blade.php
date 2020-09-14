@@ -32,7 +32,7 @@
                 <div class="menu-wrapper">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="/anasayfa"><img src="{{asset('assets/img/logo/logo.png')}}" alt=""></a>
+                        <a href="/"><img src="{{asset('assets/img/logo/logo.png')}}" alt=""></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu d-none d-lg-block">

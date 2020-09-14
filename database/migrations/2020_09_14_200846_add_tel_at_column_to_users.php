@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddDeletedAtColumnToUsers extends Migration
+class AddTelAtColumnToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddDeletedAtColumnToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->softDeletes()->after('updated_at');
+            $table->string('tel')->nullable()->unique()->after('last_name');
         });
     }
 
