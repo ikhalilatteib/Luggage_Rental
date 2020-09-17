@@ -1,6 +1,22 @@
-@extends('layouts.app')
+@extends('layouts.fixe-page')
 
 @section('content')
+    <!-- Hero Area Start-->
+    <div class="slider-area ">
+        <div class="single-slider slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>Reset Password</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <!-- Hero Area End-->
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -33,7 +49,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn-primary">
                                     {{ __('Send Password Reset Link') }}
                                 </button>
                             </div>

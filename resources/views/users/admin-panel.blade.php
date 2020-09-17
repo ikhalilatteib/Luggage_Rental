@@ -1,73 +1,62 @@
-@extends('layouts.fixe-page')
-@section('content')
-    <div class="custom-pre-footer">
-    </div>
-    <aside class="menu-sidebar2">
-        <div class="menu-sidebar2__content js-scrollbar1">
-            <div class="account2">
-                <div class="image img-cir img-120">
-                    <img src="{{asset('Doc/img/54867 600px (2).jpg')}}" width="120" height="120" alt="John Doe" />
+@extends('layouts.admin-layout')
+@section('admin')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">DASHBOARD</div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                                <div class="col-md-3">
+                                    <div class="w3-card" style=" height: 200px">
+                                        <img src="{{asset('image/ekle.png')}}" height="190" width="190">
+
+                                    </div>
+                                    <div class="card-header1">Add New User</div>
+                                </div>
+                            <div class="col-md-3">
+                                <div class="w3-card" style=" height: 200px">
+                                    <img src="{{asset('image/list.png')}}" height="190" width="190">
+
+                                </div>
+                                <div class="card-header1">List of All Users</div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="w3-card" style=" height: 200px">
+                                    <img src="{{asset('image/bekleme.png')}}" height="190" width="190">
+                                </div>
+                                <div class="card-header1">Waiting Approval</div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="w3-card" style=" height: 200px">
+                                    <img src="{{asset('image/basari.png')}}" height="190" width="190">
+
+                                </div>
+                                <div class="card-header1">Approved Publication</div>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <div class="w3-card" style=" height: 200px">
+                                    <img src="{{asset('image/blok.png')}}" height="190" width="190">
+
+                                </div>
+                                <div class="card-header1">Non Approved</div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="w3-card" style=" height: 200px">
+                                    <img src="{{asset('image/bitti.png')}}" height="190" width="190">
+
+                                </div>
+                                <div class="card-header1">Publication Expired</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h4 class="name">Ibrahim Khalil Atteib</h4>
-                <a href="#">Sign out</a>
             </div>
-            <nav class="navbar-sidebar2">
-                <ul class="list-unstyled navbar__list">
-                    <li class="active has-sub">
-                        <a class="js-arrow" href="/adminadd">
-                            <i class="fas fa-tachometer-alt"></i>Add
-                            <span class="arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/adminlist">
-                            <i class="fas fa-chart-bar"></i>List</a>
-                        <span class="inbox-num"></span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-shopping-basket"></i>eCommerce</a>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-trophy"></i>Features
-                            <span class="arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </span>
-                        </a>
-                        <ul class="list-unstyled navbar__sub-list js-sub-list">
-                            <li>
-                                <a href="table.html">
-                                    <i class="fas fa-table"></i>Tables</a>
-                            </li>
-                            <li>
-                                <a href="form.html">
-                                    <i class="far fa-check-square"></i>Forms</a>
-                            </li>
-                            <li>
-                                <a href="calendar.html">
-                                    <i class="fas fa-calendar-alt"></i>Calendar</a>
-                            </li>
-                            <li>
-                                <a href="map.html">
-                                    <i class="fas fa-map-marker-alt"></i>Maps</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-copy"></i>Pages
-                            <span class="arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
         </div>
-    </aside>
+    </div>
     <div style="clear: left"></div>
     <div class="custom-pre-footer">
     </div>

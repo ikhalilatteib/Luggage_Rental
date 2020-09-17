@@ -19,13 +19,15 @@
     <section class="login_part section_padding ">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6" style="background-color: #ea0000">
+                <div class="col-lg-6 col-md-6" style="background-image: url('{{asset('assets/img/hero/LR.png')}}'); background-repeat: no-repeat;background-color: #6ce26c  ;">
                     <div class="login_part_text text-center">
                         <div class="login_part_text_iner">
-                            <h2>New to our Shop?</h2>
-                            <p>There are advances being made in science and technology
-                                everyday, and a good example of this is the</p>
-                            <a href="/register" class="btn_3">Create an Account</a>
+                            <h1 style="font-family: Javanese Text; text-align: center"><br>
+                                <br>
+                                <br>
+                                <br>
+                                Do you want to be with us</h1>
+                            <a href="/register" class="btn_3" style="background-color: #ea0000;">Create an Account</a>
                         </div>
                     </div>
                 </div>

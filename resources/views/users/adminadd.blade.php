@@ -1,123 +1,106 @@
-@extends('layouts.fixe-page')
-@section('content')
+@extends('layouts.admin-layout')
+@section('admin')
     <div class="custom-pre-footer">
     </div>
-    <aside class="menu-sidebar2">
-        <div class="menu-sidebar2__content js-scrollbar1">
-            <div class="account2">
-                <div class="image img-cir img-120">
-                    <img src="{{asset('Doc/img/54867 600px (2).jpg')}}" width="120" height="120" alt="John Doe" />
-                </div>
-                <h4 class="name">Ibrahim Khalil Atteib</h4>
-                <a href="#">Sign out</a>
-            </div>
-            <nav class="navbar-sidebar2">
-                <ul class="list-unstyled navbar__list">
-                    <li class="active has-sub">
-                        <a class="js-arrow" href="/adminadd">
-                            <i class="fas fa-tachometer-alt"></i>Add
-                            <span class="arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </span>
-                        </a>
-                        <ul class="list-unstyled navbar__sub-list js-sub-list">
-                            <li>
-                                <a href="index.html">
-                                    <i class="fas fa-tachometer-alt"></i>Dashboard 1</a>
-                            </li>
-                            <li>
-                                <a href="index2.html">
-                                    <i class="fas fa-tachometer-alt"></i>Dashboard 2</a>
-                            </li>
-                            <li>
-                                <a href="index3.html">
-                                    <i class="fas fa-tachometer-alt"></i>Dashboard 3</a>
-                            </li>
-                            <li>
-                                <a href="index4.html">
-                                    <i class="fas fa-tachometer-alt"></i>Dashboard 4</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/adminlist">
-                            <i class="fas fa-chart-bar"></i>List</a>
-                        <span class="inbox-num"></span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-shopping-basket"></i>eCommerce</a>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-trophy"></i>Features
-                            <span class="arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </span>
-                        </a>
-                        <ul class="list-unstyled navbar__sub-list js-sub-list">
-                            <li>
-                                <a href="table.html">
-                                    <i class="fas fa-table"></i>Tables</a>
-                            </li>
-                            <li>
-                                <a href="form.html">
-                                    <i class="far fa-check-square"></i>Forms</a>
-                            </li>
-                            <li>
-                                <a href="calendar.html">
-                                    <i class="fas fa-calendar-alt"></i>Calendar</a>
-                            </li>
-                            <li>
-                                <a href="map.html">
-                                    <i class="fas fa-map-marker-alt"></i>Maps</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-copy"></i>Pages
-                            <span class="arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </aside>
     <br><br><br>
     <div id="pip" style="float: right; width: 75%">
-        <center>
-            <h2>Kayit Olun</h2>
-            <br>
-            <form action="/success" method="POST">
-                <table>
-                    <tbody><tr>
-                        <td>
-                            <label>Ad</label><br>
-                            <input type="text" name="name" required>
-                        </td>
-                        <td>
-                            <label>Soyad</label><br>
-                            <input type="text" name="last_name" required><br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>Email</label><br>
-                            <input type="email" name="email" required>
-                        </td>
-                        <td>
-                            <label>Password</label><br>
-                            <input type="password" name="password" required>
-                        </td>
-                    </tr>
-                    </tbody></table><br>
-                <button type="submit" name="registre" class="btn btn-primary">Kayit Olun</button>
-                @csrf
-            </form>
-        </center>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">{{ __('Register') }}</div>
+
+                        <div class="card-body">
+                            <form method="POST" action="{{ route('register') }}">
+                                @csrf
+                                <div class="form-group row">
+                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                        @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="last_name" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
+
+                                        @error('last_name')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-4 col-form-label text-md-right">{{ __('Telephone') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control" name="tel" placeholder="Optional">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
+                                    <div class="col-md-6">
+                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                        @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-0">
+                                    <div class="col-md-6 offset-md-4">
+                                        <center>
+                                            <button type="submit" class="btn-primary">
+                                                {{ __('Register') }}
+                                            </button>
+                                        </center>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div style="clear: left"></div>
 
