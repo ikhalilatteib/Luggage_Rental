@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddTelAtColumnToUsers extends Migration
+class AddIsApproveAtColumnToBuy extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddTelAtColumnToUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('tel')->nullable()->after('last_name');
+        Schema::table('buy', function (Blueprint $table) {
+            $table->boolean('is_approve')->after('created_date');
         });
     }
 
@@ -25,7 +25,7 @@ class AddTelAtColumnToUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('buy', function (Blueprint $table) {
             //
         });
     }

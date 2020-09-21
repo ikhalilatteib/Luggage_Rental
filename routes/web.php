@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('users.index');
-});
+Route::get('/', 'NewController@homepage');
 
 
 Route::get('/fixe','NewController@fixepage')->name('layouts');
@@ -40,3 +38,4 @@ Route::get('/profile','ProfileController@profilView');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

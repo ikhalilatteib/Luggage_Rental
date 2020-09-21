@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Buy;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -84,5 +85,12 @@ class NewController extends Controller
     public function adminadd()
     {
        return view('users.adminadd');
+    }
+
+    public function homepage(Request $request)
+    {
+        $buy = DB::table('buy')->orderBy('created_date');
+        $buy = $buy->reorder('created_date', 'desc')->get();
+        return view('users.index', compact('buy'));
     }
 }

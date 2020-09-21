@@ -62,19 +62,29 @@
                                         </li>
                                     @else
                                         <li class="nav-item dropdown">
-                                            <a class="login" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            <a class="login" href="#" role="button" data-toggle="dropdown"
+                                               aria-haspopup="true" aria-expanded="false" v-pre>
                                                 {{ Auth::user()->name }}
                                             </a>
-                                            <div style="text-align: center; border: 1px solid red" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                                <a class="loginO" href="/profile"> Profile</a> ||
-                                                <a class="loginO" href="{{ route('logout') }}"
-                                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}
-                                                </a>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                    @csrf
-                                                </form>
+                                            <div style="text-align: center; border: 1px solid red"
+                                                 class="dropdown-menu dropdown-menu-right"
+                                                 aria-labelledby="navbarDropdown">
+                                                <ul>
+                                                    <li>
+                                                        <a class="loginO" href="/profile"> Profile</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="loginO" href="{{ route('logout') }}"
+                                                           onclick="event.preventDefault();
+                                                            document.getElementById('logout-form').submit();">
+                                                            {{ __('Logout') }}
+                                                        </a>
+                                                        <form id="logout-form" action="{{ route('logout') }}"
+                                                              method="POST" class="d-none">
+                                                            @csrf
+                                                        </form>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </li>
                                     @endguest
@@ -104,7 +114,9 @@
             <div class="col-xl-7 col-lg-8 col-md-7">
                 <div class="footer-copy-right">
                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i>
+                        by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                 </div>
             </div>

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Buy;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -21,8 +23,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
-        return view('home');
+        $buy = DB::table('buy')->orderBy('created_date');
+        $buy = $buy->reorder('created_date', 'desc')->get();
+        return view('home',compact('buy'));
     }
 }

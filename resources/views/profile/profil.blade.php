@@ -56,13 +56,11 @@
                                     <label>Phone</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>
-                                        @guest
-                                             Empty
-                                        @else
-                                            {{$user->tel}}
-                                        @endguest
-                                    </p>
+                                    @if($user->tel=='')
+                                       <p>Empty</p>
+                                    @else
+                                        <p>{{$user->tel}}</p>
+                                    @endif
                                 </div>
                             </div>
                             <div class="row">
@@ -76,15 +74,15 @@
                         </div>
                     </div>
                 </div>
-            <center>
-            <div class="col-md-2">
-                <br>
-                <br>
-                <br>
-                <input type="submit" class="btn-primary" name="btnAddMore" value="Edit Profile"/>
-            </div>
-            </center>
+                <center>
+                <div class="col-md-2">
+                    <br>
+                    <br>
+                    <input type="submit" class="btn-primary" name="btnAddMore" value="Edit Profile"/>
+                </div>
+                </center>
         </form>
+      </div>
     </div>
 </center>
 @endsection
