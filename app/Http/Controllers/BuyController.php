@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\buy;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -54,6 +55,7 @@ class BuyController extends Controller
     {
         $buy =Buy::where('id',$id)->update([
             'is_approve'=>$request->get('is_approve'),
+            'approved_date'=>Carbon::now(),
             ]);
         return view('users.now-sale');
     }

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f9c965e-e145-40cf-898b-e53c06ce176a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_29_182145_add_approve_date_column_to_buy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BuyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BuyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/now-sale.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/now-sale.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +198,7 @@
       <workItem from="1601139447346" duration="12348000" />
       <workItem from="1601192883978" duration="4978000" />
       <workItem from="1601270211470" duration="12323000" />
-      <workItem from="1601402220665" duration="1154000" />
+      <workItem from="1601402220665" duration="2549000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1600116541557</created>
@@ -225,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601402792015</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Approved, Unaprroved, waiting salls added">
+      <created>1601403493549</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601403493550</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,10 +263,10 @@
     </state>
     <state x="381" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1304.768/1366.0.1920.1040@0.0.1304.768" timestamp="1600581699261" />
     <state x="381" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1304.768@0.0.1304.768" timestamp="1601272356014" />
-    <state x="92" y="0" key="CommitChangelistDialog2" timestamp="1601402781955">
+    <state x="92" y="0" key="CommitChangelistDialog2" timestamp="1601403491602">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="92" y="0" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1601402781955" />
+    <state x="92" y="0" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1601403491602" />
     <state x="92" y="92" width="1120" height="584" key="DiffContextDialog" timestamp="1600334255835">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
@@ -277,10 +287,10 @@
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="472" y="106" key="NewPhpClassDialog/0.0.1304.768@0.0.1304.768" timestamp="1600944835997" />
-    <state x="243" y="116" key="Vcs.Push.Dialog.v2" timestamp="1601402800166">
+    <state x="243" y="116" key="Vcs.Push.Dialog.v2" timestamp="1601403498184">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="243" y="116" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1601402800166" />
+    <state x="243" y="116" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1601403498184" />
     <state x="308" y="172" key="run.anything.popup" timestamp="1601194223276">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
