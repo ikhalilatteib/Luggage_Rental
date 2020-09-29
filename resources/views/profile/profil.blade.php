@@ -1,5 +1,6 @@
 @extends('layouts.fixe-page')
 @section('content')
+    <link rel="stylesheet" href="{{asset('assets/css/profile.css')}}">
     <!-- Hero Area Start-->
     <div class="slider-area ">
         <div class="single-slider slider-height2 d-flex align-items-center">
@@ -16,73 +17,64 @@
     </div>
     <br><br><br>
     <!-- Hero Area End-->
+    <center>
+    <div class="col-xl-8 order-xl-1" >
+        <div class="card bg-secondary shadow" style="border-color: #ea0000">
+            <div class="card-header1">
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <h3 class="mb-0">My account</h3>
+                    </div>
+                    <div class="col-4 text-right">
+                        <a href="#!" class=" btn-primary">Edit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body" style="background-color: white" >
+                <form>
+                    <h2  style="font-size: 30px;color:red;"><br>User information</h2>
+                    <br>
+                    <br>
 
-    <!------ Include the above in your HEAD tag ---------->
-<center>
-    <div id="bado">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li style="font-family: Javanese Text; font-size: 20px; text-align: left;" class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-            </li>
-        </ul>
-    <div  class="container emp-profile">
-        <form method="post">
-                <div class="col-md-8">
-                    <div class="tab-content profile-tab" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <br>
-                            <br>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-6" style="text-align: left;">
-                                    <label>Name</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <p>
-                                        {{$user->name}}
-                                    </p>
+                    <div class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-username">First Name</label>
+                                    <div class="col-md-6" style="background-color: white"> <h2 style="text-align: center">{{$user->name}}</h2></div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6" style="text-align: left;">
-                                    <label>Last Name</label>
-                                </div>
-                                <div class="col-md-6" >
-                                    <p>{{$user->last_name}}</p>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-email">Last Name</label>
+                                    <div class="col-md-6" style="background-color: white"> <h2 style="text-align: center">{{$user->last_name}}</h2></div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6" style="text-align: left;">
-                                    <label>Phone</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group focused" >
+                                    <label class="form-control-label" >Email</label>
+                                   <h2 style="text-align: center">{{$user->email}}</h2>
+
                                 </div>
-                                <div class="col-md-6">
-                                    @if($user->tel=='')
-                                       <p>Empty</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-last-name">Tel</label>
+                                    @if($user->tel==Null)
+                                        <div class="col-md-6" style="background-color: white"> <h2 style="text-align: center">Empty</h2></div>
                                     @else
-                                        <p>{{$user->tel}}</p>
+                                        <div class="col-md-6" style="background-color: white"> <h2 style="text-align: center">{{$user->tel}}</h2></div>
                                     @endif
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6" style="text-align: left;">
-                                    <label>Email</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <p>{{$user->email}}</p>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <center>
-                <div class="col-md-2">
-                    <br>
-                    <br>
-                    <input type="submit" class="btn-primary" name="btnAddMore" value="Edit Profile"/>
-                </div>
-                </center>
-        </form>
-      </div>
+                </form>
+            </div>
+        </div>
     </div>
-</center>
+    </center>
 @endsection

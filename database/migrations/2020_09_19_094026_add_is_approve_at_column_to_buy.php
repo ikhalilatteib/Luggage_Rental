@@ -14,7 +14,7 @@ class AddIsApproveAtColumnToBuy extends Migration
     public function up()
     {
         Schema::table('buy', function (Blueprint $table) {
-            $table->boolean('is_approve')->after('created_date');
+            $table->integer('is_approve')->default('9')->after('created_date');
         });
     }
 

@@ -2,24 +2,457 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f9c965e-e145-40cf-898b-e53c06ce176a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Console/Commands/ApproveBuy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_19_094026_add_is_approve_at_column_to_buy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/cool.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Helpers/UploadPaths.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/laratrust.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/laratrust_seeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_23_095159_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_24_110141_laratrust_setup_tables.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_24_195647_add_kilos_column_to_buy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/LaratrustSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/Raleway-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/avatar/avatar-s-9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/background/auth.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/favicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/aerial-panoramic-image-of-sansonvale-lake-X6TCENW.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/amazing-animal-beautiful-beautifull.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/back-view-of-focused-programmer-writing-code-and-PDVAFDS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/bright-milky-way-over-snow-covered-mountains-and-UEAQBXN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/happy-children-building-robots-at-robotics-school-PW3NYKH.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/inspirational-aerial-landscape-autumn-forest-and-FU2LKHA.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/introspective-programmer-examining-code-5YKU7FP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/learning-new-codes-8VKXG4E.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/lovatnet-lake-beautiful-nature-norway-PUTLQJ4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/man-coding-in-office-LHVW23S.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/modern-teaching-concept-P7BTJU7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/moody-autumn-day-in-the-dolomites-forest-and-MBFNHV2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/pexels-photo-443446.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/portrait-of-a-cheerful-couple-shopping-online-LQH69WU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/programmer-working-on-code-X596MJF.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/programmers-coding-computer-app-7CFXNL5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/road-over-dutch-dike-PLN5XJR.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/tuscany-foggy-hills-panorama-view-crop-Z9RFQ5X.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/samples/white-pelicans-pelecanus-onocrotalus-P4TFZ6E.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/screenshot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/t_free_ico_facebook.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/t_free_ico_gplus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/t_free_ico_instagram.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/t_free_ico_twitter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/app.njk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/feather-sprite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/feather.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/feather.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/feather.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/feather.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/activity.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/airplay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/alert-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/alert-octagon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/alert-triangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/align-center.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/align-justify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/align-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/align-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/anchor.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/aperture.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/archive.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-down-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-down-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-down-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-left-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-right-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-up-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-up-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-up-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/arrow-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/at-sign.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/award.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/bar-chart-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/bar-chart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/battery-charging.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/battery.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/bell-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/bell.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/bluetooth.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/bold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/book-open.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/book.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/bookmark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/box.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/briefcase.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/camera-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/camera.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/cast.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/check-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/check-square.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/chevron-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/chevron-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/chevron-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/chevron-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/chevrons-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/chevrons-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/chevrons-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/chevrons-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/chrome.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/clipboard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/clock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/cloud-drizzle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/cloud-lightning.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/cloud-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/cloud-rain.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/cloud-snow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/cloud.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/code.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/codepen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/codesandbox.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/coffee.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/columns.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/command.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/compass.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/copy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/corner-down-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/corner-down-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/corner-left-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/corner-left-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/corner-right-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/corner-right-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/corner-up-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/corner-up-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/cpu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/credit-card.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/crop.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/crosshair.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/database.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/delete.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/disc.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/divide-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/divide-square.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/divide.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/dollar-sign.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/download-cloud.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/download.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/dribbble.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/droplet.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/edit-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/edit-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/edit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/external-link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/eye-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/eye.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/facebook.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/fast-forward.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/feather.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/figma.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/file-minus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/file-plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/file-text.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/file.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/film.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/filter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/flag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/folder-minus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/folder-plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/folder.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/framer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/frown.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/gift.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/git-branch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/git-commit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/git-merge.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/git-pull-request.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/gitlab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/globe.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/grid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/hard-drive.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/hash.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/headphones.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/heart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/help-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/hexagon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/home.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/image.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/inbox.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/info.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/instagram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/italic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/key.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/layers.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/layout.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/life-buoy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/link-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/linkedin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/list.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/loader.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/lock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/log-in.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/log-out.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/mail.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/map-pin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/map.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/maximize-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/maximize.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/meh.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/menu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/message-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/message-square.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/mic-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/mic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/minimize-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/minimize.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/minus-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/minus-square.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/minus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/monitor.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/moon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/more-horizontal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/more-vertical.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/mouse-pointer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/move.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/music.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/navigation-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/navigation.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/octagon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/package.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/paperclip.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/pause-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/pause.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/pen-tool.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/percent.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/phone-call.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/phone-forwarded.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/phone-incoming.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/phone-missed.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/phone-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/phone-outgoing.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/pie-chart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/play-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/play.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/plus-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/plus-square.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/pocket.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/power.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/printer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/radio.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/refresh-ccw.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/refresh-cw.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/repeat.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/rewind.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/rotate-ccw.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/rotate-cw.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/rss.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/save.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/scissors.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/send.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/server.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/settings.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/share-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/share.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/shield-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/shield.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/shopping-bag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/shopping-cart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/shuffle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/sidebar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/skip-back.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/skip-forward.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/slack.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/slash.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/sliders.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/smartphone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/smile.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/speaker.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/square.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/stop-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/sun.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/sunrise.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/sunset.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/tablet.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/tag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/target.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/terminal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/thermometer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/thumbs-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/thumbs-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/toggle-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/toggle-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/tool.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/trash-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/trash.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/trello.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/trending-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/trending-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/triangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/truck.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/tv.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/twitch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/twitter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/type.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/umbrella.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/underline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/unlock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/upload-cloud.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/upload.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/user-check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/user-minus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/user-plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/user-x.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/users.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/video-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/video.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/voicemail.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/volume-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/volume-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/volume-x.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/volume.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/watch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/wifi-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/wifi.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/wind.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/x-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/x-octagon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/x-square.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/x.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/youtube.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/zap-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/zap.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/zoom-in.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/feather-icons/icons/zoom-out.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/main1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/pages/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/pages/form-editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/pages/ui-apexchart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/pages/ui-chartjs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/pages/widgets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/vendors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scss/bootstrap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/apexcharts/apexcharts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/apexcharts/apexcharts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/chartjs/Chart.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/chartjs/Chart.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/chartjs/Chart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/chartjs/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/chartjs/Chart.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/chartjs/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/choices.js/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/choices.js/base.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/choices.js/choices.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/choices.js/choices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/choices.js/choices.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/choices.js/choices.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/dayjs/dayjs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/dragula/dragula.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/dragula/dragula.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/perfect-scrollbar/perfect-scrollbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/quill/quill.bubble.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/quill/quill.core.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/quill/quill.core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/quill/quill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/quill/quill.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/quill/quill.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/quill/quill.snow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/simple-datatables/simple-datatables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/simple-datatables/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/toastify/src/toastify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/vendors/toastify/src/toastify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/admin/admin_5f6b47381751f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/admin/admin_5f6b4980d4d61.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/email/registre-mail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/profile-update.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/admin-create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/approve.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/non-approve.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/now-sale.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/waiting.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/utilisateurs/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/luggage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/luggage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Buy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Buy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BuyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BuyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/buy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Buy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_200846_add_tel_at_column_to_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_200846_add_tel_at_column_to_users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_19_094026_add_is_approve_at_column_to_buy.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_19_094026_add_is_approve_at_column_to_buy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/ozel.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/ozel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin-layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin-layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/fixe-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/fixe-page.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile/profil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/profil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/admin-panel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/admin-panel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/adminadd.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/adminadd.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/adminlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/adminlist.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/utilisateurs/buy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/utilisateurs/buy.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/utilisateurs/list.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,6 +571,9 @@
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/kkszymanowski/traitor" />
+      <path value="$PROJECT_DIR$/vendor/santigarcor/laratrust" />
+      <path value="$PROJECT_DIR$/vendor/wildside/userstamps" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hQ7IPM8J1Ot2vBwv7yM8Hgar3F" />
@@ -152,22 +588,25 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ibrah\www\luggage\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ibrah\www\luggage\app" />
+      <recent name="C:\Users\ibrah\www\luggage\app\Models" />
       <recent name="C:\Users\ibrah\www\luggage\public\image" />
       <recent name="C:\Users\ibrah\www\luggage\public\assets\img\hero" />
       <recent name="C:\Users\ibrah\www\luggage\public\assets\img\logo" />
-      <recent name="C:\Users\ibrah\www\luggage\public" />
-      <recent name="C:\Users\ibrah\www\luggage\public\Doc\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ibrah\www\luggage\public\assets\js" />
+      <recent name="C:\Users\ibrah\www\luggage\public\assets\vendors\dayjs" />
+      <recent name="C:\Users\ibrah\www\luggage\public\assets" />
+      <recent name="C:\Users\ibrah\www\luggage\public\assets\scss" />
+      <recent name="C:\Users\ibrah\www\luggage\public\assets\fonts" />
     </key>
   </component>
   <component name="RunManager">
@@ -198,7 +637,15 @@
       <workItem from="1600520500682" duration="27924000" />
       <workItem from="1600595001579" duration="1913000" />
       <workItem from="1600603346495" duration="4760000" />
-      <workItem from="1600684789082" duration="342000" />
+      <workItem from="1600684789082" duration="29726000" />
+      <workItem from="1600785258635" duration="30969000" />
+      <workItem from="1600940399995" duration="9389000" />
+      <workItem from="1600974686385" duration="11544000" />
+      <workItem from="1601033041018" duration="191000" />
+      <workItem from="1601033317467" duration="26801000" />
+      <workItem from="1601139447346" duration="12348000" />
+      <workItem from="1601192883978" duration="4978000" />
+      <workItem from="1601270211470" duration="12323000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1600116541557</created>
@@ -214,7 +661,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600356118382</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="HomePage">
+      <created>1600685293729</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600685293729</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,22 +678,27 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Update" />
     <MESSAGE value="Added New Element" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added New Element" />
+    <MESSAGE value="HomePage" />
+    <option name="LAST_COMMIT_MESSAGE" value="HomePage" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="400" y="185" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600352118207">
+    <state x="536" y="217" key="#File_Watchers" timestamp="1600686637769">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="400" y="185" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1304.768@0.0.1304.768" timestamp="1600352118207" />
-    <state x="381" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600581699262">
+    <state x="536" y="217" key="#File_Watchers/0.0.1304.768@0.0.1304.768" timestamp="1600686637769" />
+    <state x="400" y="185" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600862718064">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state x="400" y="185" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1304.768@0.0.1304.768" timestamp="1600862718064" />
+    <state x="381" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601272356014">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="381" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1304.768/1366.0.1920.1040@0.0.1304.768" timestamp="1600581699261" />
-    <state x="381" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1304.768@0.0.1304.768" timestamp="1600509551207" />
-    <state x="92" y="0" key="CommitChangelistDialog2" timestamp="1600356112415">
+    <state x="381" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1304.768@0.0.1304.768" timestamp="1601272356014" />
+    <state x="92" y="0" key="CommitChangelistDialog2" timestamp="1600685290535">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="92" y="0" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1600356112415" />
+    <state x="92" y="0" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1600685290535" />
     <state x="92" y="92" width="1120" height="584" key="DiffContextDialog" timestamp="1600334255835">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
@@ -256,21 +715,21 @@
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="475" y="303" key="Github.CreateGistDialog/0.0.1304.768@0.0.1304.768" timestamp="1600084902684" />
-    <state x="472" y="106" key="NewPhpClassDialog" timestamp="1599942333600">
+    <state x="472" y="106" key="NewPhpClassDialog" timestamp="1600944835997">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="472" y="106" key="NewPhpClassDialog/0.0.1304.768@0.0.1304.768" timestamp="1599942333600" />
-    <state x="243" y="116" key="Vcs.Push.Dialog.v2" timestamp="1600356140832">
+    <state x="472" y="106" key="NewPhpClassDialog/0.0.1304.768@0.0.1304.768" timestamp="1600944835997" />
+    <state x="243" y="116" key="Vcs.Push.Dialog.v2" timestamp="1600685325753">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="243" y="116" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1600356140832" />
-    <state x="308" y="172" key="run.anything.popup" timestamp="1600025459109">
+    <state x="243" y="116" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1600685325753" />
+    <state x="308" y="172" key="run.anything.popup" timestamp="1601194223276">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="308" y="172" key="run.anything.popup/0.0.1304.768@0.0.1304.768" timestamp="1600025459109" />
-    <state x="315" y="89" width="670" height="58" key="search.everywhere.popup" timestamp="1600433461924">
+    <state x="308" y="172" key="run.anything.popup/0.0.1304.768@0.0.1304.768" timestamp="1601194223276" />
+    <state x="315" y="89" width="670" height="58" key="search.everywhere.popup" timestamp="1601125249038">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="315" y="89" width="670" height="58" key="search.everywhere.popup/0.0.1304.768@0.0.1304.768" timestamp="1600433461924" />
+    <state x="315" y="89" width="670" height="58" key="search.everywhere.popup/0.0.1304.768@0.0.1304.768" timestamp="1601125249038" />
   </component>
 </project>

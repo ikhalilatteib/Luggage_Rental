@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -29,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -67,12 +68,23 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'last_name' =>$data['last_name'],
             'tel'=>$data['tel'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        $to_name = 'Luggage Rental';
+        $to_mail = $data['email'];
+        $username = $data['name'];
+        $body = [];
+        $mailData = array('body'=>$body,'username'=>$username);
+        Mail::send('email.registre-mail',$mailData,function ($message) use($to_name,$to_mail){
+            $message->to($to_mail,$to_name)->subject('Welcome to Us');
+            $message->from(env('MAIL_USERNAME'),'Luggage Rental');
+        });
+
+        return $user;
     }
 }

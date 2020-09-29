@@ -10,7 +10,7 @@ class Buy extends Model
 
 
     protected $fillable = [
-        'vol','date', 'depart', 'arrived', 'from', 'to', 'note','created_date','is_approve','created_by','updated_by','deleted_by'
+        'vol','date', 'depart', 'arrived', 'from', 'to','kg', 'note','created_date','is_approve','created_by','updated_by','deleted_by'
     ];
 
 

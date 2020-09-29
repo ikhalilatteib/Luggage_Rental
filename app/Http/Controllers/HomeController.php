@@ -13,10 +13,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -26,8 +22,10 @@ class HomeController extends Controller
 
     public function index()
     {
+
         $buy = DB::table('buy')->orderBy('created_date');
         $buy = $buy->reorder('created_date', 'desc')->get();
+        $buy = Buy::where('is_approve','=','1')->get();
         return view('home',compact('buy'));
     }
 }

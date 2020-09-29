@@ -7,7 +7,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="{{asset('site.webmanifest')}}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/favicon.ico')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/hero/LR.png')}}">
+
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
@@ -23,6 +24,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/ozel.css')}}">
 
+
 </head>
 <body>
 <header>
@@ -33,11 +35,13 @@
                 <div class="menu-wrapper">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="/"><img src="{{asset('assets/img/logo/Luggage_Rental.png')}}" alt=""></a>
+                        <a href="/"><img src="{{asset('assets/img/logo/Luggage_Rental.png')}}" alt=""
+                                         style="padding-top: 0"></a>
                     </div>
                     <!-- Main-menu -->
                     <div class="main-menu d-none d-lg-block">
                         <nav>
+                            <br>
                             <ul id="navigation">
                                 <li><a href="/">Home</a></li>
                                 <li><a href="#">About</a></li>
@@ -47,10 +51,23 @@
                     </div>
                     <!-- Header Right -->
                     <div class="header-right">
+                        <br>
                         <ul>
                             <li>
                                 <div class="nav-search search-switch">
                                     <span class="flaticon-search"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span><a href="/buy" style=" color: #fff;
+                                                font-family: 'Javanese Text';
+                                                font-size: 15px;
+                                                background-color: #f81f1f;
+                                                border-color: #f81f1f;
+                                                padding-top: 7px;
+                                                padding-left: 10px;
+                                                padding-right: 10px;">SALE</a></span>
                                 </div>
                             </li>
                             <li>
@@ -61,30 +78,30 @@
                                             <a href="{{ route('login') }}"><span class="flaticon-user"></span></a>
                                         </li>
                                     @else
-                                        <li class="nav-item dropdown">
-                                            <a class="login" href="#" role="button" data-toggle="dropdown"
-                                               aria-haspopup="true" aria-expanded="false" v-pre>
-                                                {{ Auth::user()->name }}
+                                        <li class="nav-item">
+                                            <a href="#" data-toggle="dropdown"
+                                               class="nav-link  dropdown-toggle nav-link-lg nav-link-user"
+                                               style="color: black; font-family: 'Times New Roman'; font-size: 15px;padding-left: 0">
+                                                <i> {{ Auth::user()->name }}</i>
                                             </a>
-                                            <div style="text-align: center; border: 1px solid red"
-                                                 class="dropdown-menu dropdown-menu-right"
-                                                 aria-labelledby="navbarDropdown">
-                                                <ul>
-                                                    <li>
-                                                        <a class="loginO" href="/profile"> Profile</a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="loginO" href="{{ route('logout') }}"
-                                                           onclick="event.preventDefault();
-                                                            document.getElementById('logout-form').submit();">
-                                                            {{ __('Logout') }}
-                                                        </a>
-                                                        <form id="logout-form" action="{{ route('logout') }}"
-                                                              method="POST" class="d-none">
-                                                            @csrf
-                                                        </form>
-                                                    </li>
-                                                </ul>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="/profile/{{Auth::user()->id}}"><i data-feather="user"></i>
+                                                    Account</a>
+                                                <a class="dropdown-item" href="#"><i data-feather="mail"></i>
+                                                    Messages</a>
+                                                <a class="dropdown-item" href="#"><i data-feather="settings"></i>
+                                                    Settings</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                      class="d-none">
+                                                    @csrf
+                                                </form>
                                             </div>
                                         </li>
                                     @endguest
@@ -180,6 +197,7 @@
 <!-- Jquery Plugins, main Jquery -->
 <script src="{{asset('./assets/js/plugins.js')}}"></script>
 <script src="{{asset('./assets/js/main.js')}}"></script>
+
 
 </body>
 </html>

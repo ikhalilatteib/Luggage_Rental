@@ -8,9 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class ProfileController extends Controller
 {
-    public function profilView()
+    public function profilView( $id)
     {
-        $user = User::find(1);
-        return view('profile.profil',compact('user'));
+        $user=User::where('id',$id)->get();
+        $user = $user->first();
+
+            return view('profile.profil',compact('user'));
     }
 }

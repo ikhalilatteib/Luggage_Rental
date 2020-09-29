@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Admin;
 use App\Buy;
 use App\User;
 use Carbon\Carbon;
@@ -17,16 +18,6 @@ class NewController extends Controller
         return view('layouts.fixe-page');
     }
 
-    public function login()
-    {
-        return view('utilisateurs.login');
-    }
-
-    public function createcompte()
-    {
-        return view('utilisateurs.create-compte');
-    }
-
     public function create(Request $request)
     {
         $data =$request->all();
@@ -38,12 +29,6 @@ class NewController extends Controller
             'password'=>Hash::make($password)
         ]);
         return view('utilisateurs.successful-page');
-    }
-
-    public function liste()
-    {
-        $users = User::where('deleted_at','=',null)->get();
-        return view('utilisateurs.list',compact('users'));
     }
 
     public function updateView($id)
@@ -71,26 +56,19 @@ class NewController extends Controller
         return view('utilisateurs.successful-page');
     }
 
-    public function admin()
-    {
-        return view('users.admin-panel');
-    }
-
-    public function adminlist()
-    {
-        $users = User::where('deleted_at','=',null)->get();
-        return view('users.adminlist',compact('users'));
-    }
-
-    public function adminadd()
-    {
-       return view('users.adminadd');
-    }
-
     public function homepage(Request $request)
     {
         $buy = DB::table('buy')->orderBy('created_date');
         $buy = $buy->reorder('created_date', 'desc')->get();
         return view('users.index', compact('buy'));
+    }
+
+    public function mail(){
+        return view('email.registre-mail');
+    }
+    public function getUser()
+    {
+        $user= User::all();
+        return $user;
     }
 }

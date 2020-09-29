@@ -1,8 +1,6 @@
 @extends('layouts.admin-layout')
-@section('admin')
-    <div class="custom-pre-footer">
-    </div>
-    <div style="float: right; width: 75%">
+@section('content')
+    <div class="col-md-12">
         <br><br>
         <div >
             <center>
@@ -38,9 +36,5 @@
                 </table>
             </center>
         </div>
-    </div>
-    <div style="clear: left"></div>
-
-    <div class="custom-pre-footer">
     </div>
 @endsection

@@ -75,21 +75,20 @@
                                         <table class="tablist1">
                                             <tr>
                                                 <th rowspan="2">Company Name: {{$buys->vol}} </th>
-                                                <td colspan="2">Date: {{$buys->date}}
+                                                <td colspan="2">Departure Date: {{$buys->date}}
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    kalkiş saat: {{$buys->depart}}
+                                                    Departure Time: {{$buys->depart}}
                                                 </td>
                                                 <td>
-                                                    variş saat: {{$buys->arrived}}
+                                                    Arrival Time: {{$buys->arrived}}
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th>23Kg</th>
-                                                <th>46Kg</th>
-                                                <th>Extra</th>
+                                                <th colspan="3" style="text-align: center"><h3>I can get {{$buys->kg}}Kg</h3></th>
+
                                             </tr>
                                         </table>
                                         <h2>
@@ -101,7 +100,9 @@
                                     </form>
                                     <div class=" row justify-content-center">
                                         <button class="btn-primary">
-                                            Contact
+                                            <a href="/profile">
+                                                contact
+                                            </a>
                                         </button>
                                     </div>
                                 </div>
@@ -114,7 +115,7 @@
             <!-- Button -->
             <div class="row justify-content-center">
                 <div class="room-btn pt-70">
-                    <a href="catagori.html" class="btn view-btn1">View More Products</a>
+                    <a href="catagori.h" class="btn view-btn1">View More Products</a>
                 </div>
             </div>
         </div>
