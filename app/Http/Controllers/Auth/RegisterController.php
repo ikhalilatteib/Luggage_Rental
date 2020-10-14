@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -84,7 +84,6 @@ class RegisterController extends Controller
             $message->to($to_mail,$to_name)->subject('Welcome to Us');
             $message->from(env('MAIL_USERNAME'),'Luggage Rental');
         });
-
         return $user;
     }
 }

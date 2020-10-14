@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Buy;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -22,10 +23,7 @@ class HomeController extends Controller
 
     public function index()
     {
-
-        $buy = DB::table('buy')->orderBy('created_date');
-        $buy = $buy->reorder('created_date', 'desc')->get();
-        $buy = Buy::where('is_approve','=','1')->get();
-        return view('home',compact('buy'));
+        $buys = Buy::where('deleted_at', '=', null)->where('is_approve', '=', '1')->orderBy('created_at', 'DESC')->get();
+        return view('home', compact('buys'));
     }
 }

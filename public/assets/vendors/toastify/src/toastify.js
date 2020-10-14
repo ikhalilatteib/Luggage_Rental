@@ -171,7 +171,7 @@
           }
         )
       }
-      
+
       // Adding an on-click destination path
       if (typeof this.options.destination !== "undefined") {
         divElement.addEventListener(
@@ -192,7 +192,7 @@
           "click",
           function(event) {
             event.stopPropagation();
-            this.options.onClick();            
+            this.options.onClick();
           }.bind(this)
         );
       }
@@ -292,7 +292,7 @@
       bottom: 15,
     };
 
-    // Get all toast messages on the DOM
+    // Get all toast message on the DOM
     var allToasts = document.getElementsByClassName("toastify");
 
     var classUsed;

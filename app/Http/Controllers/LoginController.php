@@ -12,19 +12,19 @@ class LoginController extends Controller
         return view('utilisateurs.login');
     }
 
-    public function login(Request $request)
-    {
-
-        $users = User::all();
-        $email = $request->get('email');
-        $password = $request->get('password');
-        //  $hashpassword = Hash::make($password);
-        $user = User::where('email',$email)->where('password',$password)->first();
-
-        if (isset($user))
-        {
-            return view('utilisateurs.successful-page',compact('users'));
-        }
-
-    }
+//    public function login(Request $request)
+//    {
+//
+//        $users = User::all();
+//        $email = $request->get('email');
+//        $password = $request->get('password');
+//        //  $hashpassword = Hash::make($password);
+//        $user = User::where('email',$email)->where('password',$password)->first();
+//
+//        if (isset($user))
+//        {
+//            return view('utilisateurs.successful-page',compact('users'));
+//        }
+//
+//    }
 }

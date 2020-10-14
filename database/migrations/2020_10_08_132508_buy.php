@@ -18,21 +18,22 @@ class Buy extends Migration
             $table->increments('id');
             $table->string('vol');
             $table->date('date');
-            $table->string('depart');
-            $table->string('arrived');
+            $table->date('arrival');
+            $table->time('depart');
+            $table->time('arrived');
             $table->string('from');
             $table->string('to');
+            $table->integer('kg');
             $table->string('note');
-            $table->timestamp('created_date');
+            $table->integer('is_approve')->default('9');
+            $table->timestamp('approved_date')->nullable();
             $table->integer('created_by')->unsigned();
-            $table->integer('updated_by')->unsigned()->nullable();
-            $table->integer('deleted_by')->unsigned()->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
             $table->softDeletes();
 
             $table->foreign('created_by')->references('id')->on('users')->cascadeOnDelete();
-            $table->foreign('updated_by')->references('id')->on('users')->cascadeOnDelete();
-            $table->foreign('deleted_by')->references('id')->on('users')->cascadeOnDelete();
 
         });
     }

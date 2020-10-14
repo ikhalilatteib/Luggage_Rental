@@ -2,14 +2,16 @@
 
 namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Cache;
 use Laratrust\Traits\LaratrustUserTrait;
 
 class User extends Authenticatable
 {
     use LaratrustUserTrait;
-    use Notifiable;
+    use Notifiable, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -37,8 +39,26 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
     public function buy() {
         return $this->hasMany(Buy::class,'created_by');
+    }
+
+    public function message() {
+        return $this->hasMany(Message::class,'receiver');
+    }
+
+    public function sage() {
+        return $this->hasMany(Message::class,'sender');
+    }
+
+
+
+
+
+    public function isOnline()
+    {
+        return Cache::has('user-is-online-' . $this->id);
     }
 
 }

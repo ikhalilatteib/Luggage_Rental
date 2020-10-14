@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('role:superadministrator');
-    }
 
     /* Add Admin */
 
@@ -55,7 +51,7 @@ class AdminController extends Controller
             'tel' => $tel,
             'email' => $email,
             'password' => $password,
-            'photo' => $filePhotoUrl,
+            'photo' => $adminPhotoName,
         ]);
         return view('utilisateurs.successful-page');
     }
@@ -63,16 +59,16 @@ class AdminController extends Controller
 
 
     /* Admin Panel */
-    public function admin(Request $request)
+    public function Dashbord()
     {
-        $admins = Admin::find(3);
-        return view('users.admin-panel',compact('admins'));
+        return view('users.dashbord');
     }
     /* End Admin Panel*/
 
     /* Admin Users List*/
     public function adminlist()
     {
+        $a = 1;
         $users = User::where('deleted_at','=',null)->get();
         return view('users.adminlist',compact('users'));
     }
@@ -88,26 +84,29 @@ class AdminController extends Controller
     /* Admin Now sale */
     public function now()
     {
-        $buy = DB::table('buy')->orderBy('created_date');
-        $buy = $buy->reorder('created_date', 'desc')->get();
-        $buy = Buy::with('user')->get();
-        return view('users.now-sale',compact('buy'));
+        $admin= Admin::find(1);
+        $buys = Buy::where('deleted_at','=',null)->orderBy('created_at','desc')->get();
+        return view('users.now-sale',compact('buys'));
     }
 
     public function approveSales()
     {
-        $buy = DB::table('buy')->orderBy('created_date');
-        $buy = $buy->reorder('created_date', 'desc')->get();
-        $buy = Buy::with('user')->where('is_approve','=',1)->get();
-        return view('users.approve',compact('buy'));
+
+        $buys = Buy::with(['user'])->where('is_approve','=',1)->where('deleted_at','=',null)->orderBy('created_at','desc')->get();
+        return view('users.approve',compact('buys'));
     }
 
     public function Unapprove()
     {
-        $buy = DB::table('buy')->orderBy('created_date');
-        $buy = $buy->reorder('created_date', 'desc')->get();
-        $buy = Buy::with('user')->where('is_approve','=',0)->get();
-        return view('users.approve',compact('buy'));
+
+        $buys = Buy::with('user')->where('is_approve','=',0)->where('deleted_at','=',null)->orderBy('created_at','desc')->get();
+        return view('users.non-approve',compact('buys'));
+    }
+
+    public function DeleteSale()
+    {
+        $buys = Buy::with('user')->where('deleted_at','!=',null)->orderBy('created_at','desc')->get();
+        return view('users.delete-buy',compact('buys'));
     }
 
 }

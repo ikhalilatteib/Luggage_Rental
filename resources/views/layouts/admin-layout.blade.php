@@ -1,302 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Luggage Rental</title>
-
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
+    <!-- base:css -->
+    <link rel="stylesheet" href="{{asset('admin/vendors/mdi/css/materialdesignicons.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/vendors/feather/feather.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/vendors/base/vendor.bundle.base.css')}}">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="{{asset('admin/vendors/flag-icon-css/css/flag-icon.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('admin/vendors/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/vendors/jquery-bar-rating/fontawesome-stars-o.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/vendors/jquery-bar-rating/fontawesome-stars.css')}}">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{{asset('admin/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/ozel.css')}}">
-
-    <link rel="stylesheet" href="{{asset('assets/vendors/chartjs/Chart.min.css')}}">
-
-    <link rel="stylesheet" href="{{asset('assets/vendors/perfect-scrollbar/perfect-scrollbar.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
-    <link rel="shortcut icon" href="{{asset('assets/img/hero/LR.png')}}" type="image/x-icon">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="{{asset('assets/img/hero/LR.png')}}"/>
 </head>
 <body>
-<div id="app">
-    <div id="sidebar" class='active'>
-        <div class="sidebar-wrapper active">
-            <div class="sidebar-header">
-                <img src="{{asset('assets/img/logo/Luggage_Rental.png')}}" alt="" srcset="">
-            </div>
-            <div class="sidebar-menu">
-                <ul class="menu">
-                    <li class='sidebar-title'>Main Menu</li>
-                    <li class="sidebar-item active ">
-                        <a href="/admin" class='sidebar-link'>
-                            <i data-feather="home" style="color:black;width:40px;height: 20px "></i>
-                            <span>Dashboard</span>
-                        </a>
-
-                    </li>
-
-
-                    <li class="sidebar-item  has-sub">
-                        <a href="#" class='sidebar-link'>
-                            <i data-feather="triangle" style="color:black;width:40px;height: 20px "></i>
-                            <span>Admin Operations</span>
-                        </a>
-
-                        <ul class="submenu">
-
-                            <li>
-                                <a href="/adminadd">Add User</a>
-                            </li>
-
-                            <li>
-                                <a href="/cree">Add Admin</a>
-                            </li>
-
-                            <li>
-                                <a href="/adminlist">Update User</a>
-                            </li>
-
-                            <li>
-                                <a href="/adminlist">Delete User</a>
-                            </li>
-
-                        </ul>
-
-                    </li>
-
-                    <li class="sidebar-item  has-sub">
-                        <a href="#" class='sidebar-link'>
-                            <i data-feather="briefcase" style="color:black;width:40px;height: 20px "></i>
-                            <span>Sales Operations</span>
-                        </a>
-
-                        <ul class="submenu">
-
-                            <li>
-                                <a href="/buy">Add Sale</a>
-                            </li>
-                            <li>
-                                <a href="/now">All Salls </a>
-                            </li>
-                            <li>
-                                <a href="{{route('approve.sales')}}">Approve Sale</a>
-                            </li>
-                            <li>
-                                <a href="/waiting">Waiting Sale</a>
-                            </li>
-                            <li>
-                                <a href="{{route('unapprove')}}">No Approved Sale</a>
-                            </li>
-                        </ul>
-
-                    </li>
-
-
-                    <li class="sidebar-item  has-sub">
-                        <a href="#" class='sidebar-link'>
-                            <i data-feather="file-text" style="color:black;width:40px;height: 20px "></i>
-                            <span>Lists</span>
-                        </a>
-
-                        <ul class="submenu ">
-
-                            <li>
-                                <a href="/adminler">Admin List</a>
-                            </li>
-
-                            <li>
-                                <a href="/adminlist">Users List</a>
-                            </li>
-
-                        </ul>
-
-                    </li>
-
-
-                    <li class="sidebar-item  ">
-                        <a href="table-datatable.html" class='sidebar-link'>
-                            <i data-feather="file-plus" style="color:black;width:40px;height: 20px "></i>
-                            <span>TODO list</span>
-                        </a>
-
-                    </li>
-
-
-                    <li class="sidebar-item  has-sub">
-                        <a href="#" class='sidebar-link'>
-                            <i data-feather="trending-up" style="color:black;width:40px;height: 20px "></i>
-                            <span>Satistic</span>
-                        </a>
-
-                        <ul class="submenu ">
-
-                            <li>
-                                <a href="ui-chart-chartjs.html">ChartJS</a>
-                            </li>
-
-                            <li>
-                                <a href="ui-chart-apexchart.html">Apexchart</a>
-                            </li>
-
-                        </ul>
-
-                    </li>
-
-
-                    <li class='sidebar-title'>Pages</li>
-
-
-                    <li class="sidebar-item  has-sub">
-                        <a href="#" class='sidebar-link'>
-                            <i data-feather="user" style="color:black;width:40px;height: 20px "></i>
-                            <span>Authentication</span>
-                        </a>
-
-                        <ul class="submenu ">
-
-                            <li>
-                                <a href="auth-login.html">Login</a>
-                            </li>
-
-                            <li>
-                                <a href="auth-register.html">Register</a>
-                            </li>
-
-                            <li>
-                                <a href="auth-forgot-password.html">Forgot Password</a>
-                            </li>
-
-                        </ul>
-
-                    </li>
-
-
-                    <li class="sidebar-item  has-sub">
-                        <a href="#" class='sidebar-link'>
-                            <i data-feather="alert-circle" style="color:black;width:40px;height: 20px "></i>
-                            <span>Errors</span>
-                        </a>
-
-                        <ul class="submenu ">
-
-                            <li>
-                                <a href="error-403.html">403</a>
-                            </li>
-
-                            <li>
-                                <a href="error-404.html">404</a>
-                            </li>
-
-                            <li>
-                                <a href="error-500.html">500</a>
-                            </li>
-
-                        </ul>
-
-                    </li>
-
-
-                </ul>
-            </div>
-            <button class="sidebar-toggler btn x"><i data-feather="x" style="color:black;width:40px; "></i></button>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"
+             style="background-color: white">
+            <a class="navbar-brand brand-logo" href="/"><img src="{{asset('assets/img/logo/luggage_rental.png')}}"
+                                                             alt="logo"/></a>
+            <a class="navbar-brand brand-logo-mini" href="/"><img src="{{asset('assets/img/hero/LR.png')}}" alt="logo"/></a>
         </div>
-    </div>
-    <div id="main">
-        <nav class="navbar navbar-header navbar-expand navbar-light">
-            <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
-            <button class="btn navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                <span class="icon-menu"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
-                    <li class="dropdown nav-icon">
-                        <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
-                            <div class="d-lg-inline-block">
-                                <i data-feather="bell"></i>
-                            </div>
+            <ul class="navbar-nav mr-lg-2">
+                <li class="nav-item nav-search d-none d-lg-block">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Search Projects.." aria-label="search"
+                               aria-describedby="search">
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+                @guest
+                    <li class="nav-item dropdown d-flex mr-4 ">
+                        <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center"
+                           id="notificationDropdown" href="{{ route('login') }}">
+                            <i class="icon-head"></i>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-large">
-                            <h6 class='py-2 px-4'>Notifications</h6>
-                            <ul class="list-group rounded-none">
-                                <li class="list-group-item border-0 align-items-start">
-                                    <div class="avatar bg-success mr-3">
-                                        <span class="avatar-content"><i data-feather="shopping-cart"></i></span>
-                                    </div>
-                                    <div>
-                                        <h6 class='text-bold'>New Order</h6>
-                                        <p class='text-xs'>
-                                            An order made by Ahmad Saugi for product Samsung Galaxy S69
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
+                    </li>
+                @else
+                    <li class="nav-item dropdown d-flex mr-4 ">
+                        <a href="" data-toggle="dropdown"
+                           class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <div class="d-none d-md-block d-lg-inline-block"> {{ Auth::user()->name }}</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                             aria-labelledby="notificationDropdown">
+                            <a class="dropdown-item preview-item" href="/profile/{{Auth::user()->id}}"> <i
+                                    class="icon-head"></i> Account</a>
+                            <a class="dropdown-item preview-item" href="{{route('contact')}}"><i class="icon-mail"></i> Messages</a>
+                            <a class="dropdown-item" href="#"><i class="icon-cog"></i> Settings</a>
+
+                            <a class="dropdown-item preview-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                <i class="icon-inbox"></i>{{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </div>
                     </li>
-                    <li class="dropdown nav-icon mr-2">
-                        <a href="#" data-toggle="dropdown" class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
-                            <div class="d-lg-inline-block">
-                                <i data-feather="mail"></i>
-                            </div>
-                        </a>
-                    </li>
-                    @guest
-                        <li class="dropdown nav-icon mr-2">
-                            <a href="{{ route('login') }}">
-                                <span data-feather="user" class="flaticon-user"></span>
-                            </a>
-                        </li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" data-toggle="dropdown"
-                               class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                                <div class="avatar mr-1">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="d-none d-md-block d-lg-inline-block"> {{ Auth::user()->name }}</div>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="/profile/{{Auth::user()->id}}"><i data-feather="user"></i> Account</a>
-                                <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
-                                <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
-                </ul>
-            </div>
-        </nav>
-
-        <div class="main-content container-fluid">
-            @yield('content')
+                @endguest
+                <li class="nav-item dropdown mr-4 d-lg-flex d-none">
+                    <a class="nav-link count-indicatord-flex align-item s-center justify-content-center" href="/">
+                        <i class="mdi mdi-home-outline"></i>
+                    </a>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
+                <span class="icon-menu"></span>
+            </button>
         </div>
-
-        <footer>
-            <div class="footer clearfix mb-0 text-muted">
-                <div class="float-left">
-                    <p>2020 &copy; Voler</p>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: red">
+            <div class="user-profile">
+                <div class="user-image">
+                    <img src="{{asset('uploads/admin/admin_5f85f9b08f407.jpg')}}" alt="admin">
                 </div>
-                <div class="float-right">
-                    <p>Crafted with <span class='text-danger'><i data-feather="heart"></i></span> by <a
-                            href="http://ahmadsaugi.com">Ahmad Saugi</a></p>
+                <div class="user-name" style="color:black;">
+                    I.KHALIL ATTEIB YACOUB
+                </div>
+                <div class="user-designation">
+                    Administrator
                 </div>
             </div>
-        </footer>
-    </div>
-</div>
-<script src="{{asset('assets/js/feather-icons/feather.min.js')}}"></script>
-<script src="{{asset('assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
-<script src="{{asset('assets/js/app.js')}}"></script>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('dashboard')}}">
+                        <i class="icon-box menu-icon"></i>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                        <i class="icon-head menu-icon"></i>
+                        <span class="menu-title">Basic Action</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="auth">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="{{route('create')}}"> Add Admin </a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('add.users')}}"> Add User </a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('users.list')}}"> Uploads/Deletes </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                       aria-controls="ui-basic">
+                        <i class="icon-disc menu-icon"></i>
+                        <span class="menu-title">Sales Operations</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="{{route('sale')}}">Add Sale</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('now')}}">All Sales</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('approve.sales')}}">Approved
+                                    Sales</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('waiting')}}">Waiting Sales</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('unapprove')}}">Unapproved Sales</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('deleted.sale')}}">Deleted Sales</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('users.list')}}">
+                        <i class="icon-file menu-icon"></i>
+                        <span class="menu-title">Users List</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="icon-pie-graph menu-icon"></i>
+                        <span class="menu-title">Charts</span>
+                    </a>
+                </li>
 
-<script src="{{asset('assets/vendors/chartjs/Chart.min.js')}}"></script>
-<script src="{{asset('assets/vendors/apexcharts/apexcharts.min.js')}}"></script>
-<script src="{{asset('assets/js/pages/dashboard.js')}}"></script>
-<script src="{{asset('assets/js/main1.js')}}"></script>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('contact')}}">
+                        <i class="icon-help menu-icon"></i>
+                        <span class="menu-title">Inbox</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="icon-book menu-icon"></i>
+                        <span class="menu-title">Terms & Conditions</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+        @include('layouts.alert')
+        @yield('content')
+        <!-- content-wrapper ends -->
+            <!-- partial:partials/_footer.html -->
+            <footer class="footer">
+                <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a
+                            href="{{route('home')}}" target="_blank" class="text-muted">Luggage Rental</a>. All rights reserved.</span>
+                </div>
+            </footer>
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+
+<!-- base:js -->
+<script src="{{asset('admin/vendors/base/vendor.bundle.base.js')}}"></script>
+<!-- endinject -->
+<!-- Plugin js for this page-->
+<!-- End plugin js for this page-->
+<!-- inject:js -->
+<script src="{{asset('admin/js/off-canvas.js')}}"></script>
+<script src="{{asset('admin/js/hoverable-collapse.js')}}"></script>
+<script src="{{asset('admin/js/template.js')}}"></script>
+<!-- endinject -->
+<!-- plugin js for this page -->
+<script src="{{asset('admin/vendors/chart.js/Chart.min.js')}}"></script>
+<script src="{{asset('admin/vendors/jquery-bar-rating/jquery.barrating.min.js')}}"></script>
+<!-- End plugin js for this page -->
+<!-- Custom js for this page-->
+<script src="{{asset('admin/js/dashboard.js')}}"></script>
+<script src="{{asset('admin/js/chart.js')}}"></script>
+<!-- End custom js for this page-->
 </body>
 </html>
+

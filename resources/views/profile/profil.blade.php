@@ -55,7 +55,7 @@
                             <div class="col-lg-6">
                                 <div class="form-group focused" >
                                     <label class="form-control-label" >Email</label>
-                                   <h2 style="text-align: center">{{$user->email}}</h2>
+                                   <h2 style="text-align: center;font-size: 22px">{{$user->email}}</h2>
 
                                 </div>
                             </div>
@@ -63,16 +63,33 @@
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="input-last-name">Tel</label>
                                     @if($user->tel==Null)
-                                        <div class="col-md-6" style="background-color: white"> <h2 style="text-align: center">Empty</h2></div>
+                                        <div class="col-md-6" style="background-color: white"> <h2 style="text-align: center;font-size: 22px">Empty</h2></div>
                                     @else
-                                        <div class="col-md-6" style="background-color: white"> <h2 style="text-align: center">{{$user->tel}}</h2></div>
+                                        <div class="col-md-6" style="background-color: white"> <h2 style="text-align: center; font-size: 22px">{{$user->tel}}</h2></div>
                                     @endif
-
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </form>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div style="float: right">
+                    <a href="/guncelle/{{$user->id}}">
+                        <button class="btn btn-primary" style="font-family: 'Cambria';">
+                            Edit
+                        </button>
+                    </a>
+                    <a href="/sil/{{$user->id}}">
+                        <button class="btn btn-danger" style="font-family: 'Cambria';">
+                            Delete
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

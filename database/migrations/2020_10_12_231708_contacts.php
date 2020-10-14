@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddIsApproveAtColumnToBuy extends Migration
+class Contacts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class AddIsApproveAtColumnToBuy extends Migration
      */
     public function up()
     {
-        Schema::table('buy', function (Blueprint $table) {
-            $table->integer('is_approve')->default('9')->after('created_date');
+        Schema::create('contacts',function (Blueprint $table){
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email');
+            $table->string('text');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -25,8 +30,6 @@ class AddIsApproveAtColumnToBuy extends Migration
      */
     public function down()
     {
-        Schema::table('buy', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('contacts');
     }
 }

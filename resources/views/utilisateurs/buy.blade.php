@@ -36,6 +36,19 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label for="arrival" class="col-md-4 col-form-label text-md-right">{{ __('Arrival Date') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="arrival" type="date" class="form-control @error('arrival') is-invalid @enderror" name="arrival" value="{{ old('arrival') }}" required autocomplete="arrival" autofocus>
+
+                                    @error('arrival')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
 
                             <div class="form-group row">
                                 <label for="depart" class="col-md-4 col-form-label text-md-right">{{ __('Departure Time') }}</label>

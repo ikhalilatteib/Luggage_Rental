@@ -32,10 +32,11 @@
     <div class="header-area">
         <div class="main-header header-sticky">
             <div class="container-fluid">
-                <div class="menu-wrapper">
+                <div class="menu-wrapper" style="height: 100px">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="/"><img src="{{asset('assets/img/logo/Luggage_Rental.png')}}" alt=""
+                        <a href="/"><img src="{{asset('assets/img/logo/Luggage_Rental.png')}}" alt="Luggage Rental"
+                                         width="350"
                                          style="padding-top: 0"></a>
                     </div>
                     <!-- Main-menu -->
@@ -43,9 +44,9 @@
                         <nav>
                             <br>
                             <ul id="navigation">
-                                <li><a href="/">Home</a></li>
+                                <li><a href="{{route('home')}}">Home</a></li>
                                 <li><a href="#">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="#">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -85,11 +86,19 @@
                                                 <i> {{ Auth::user()->name }}</i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="/profile/{{Auth::user()->id}}"><i data-feather="user"></i>
+                                                @if(Auth::user()->id == 1)
+                                                    <a class="dropdown-item" href="{{route('dashboard')}}"><i
+                                                            data-feather="dashboard"></i>
+                                                        Dashboard
+                                                    </a>
+                                                @endif
+                                                <a class="dropdown-item" href="/profile/{{Auth::user()->id}}"><i
+                                                        data-feather="user"></i>
                                                     Account</a>
+                                                <a class="dropdown-item" href="/mysale/{{Auth::user()->id}}"><i
+                                                        data-feather="mail"></i>
+                                                    My Sales</a>
                                                 <a class="dropdown-item" href="#"><i data-feather="mail"></i>
-                                                    Messages</a>
-                                                <a class="dropdown-item" href="#"><i data-feather="settings"></i>
                                                     Settings</a>
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -120,31 +129,104 @@
     <!-- Header End -->
 </header>
 <main>
+    @include('layouts.alert')
+
     @yield('content')
 </main>
 <footer>
-
     <!-- Footer Start-->
     <div class="footer-area footer-padding">
-        <!-- Footer bottom -->
-        <div class="row align-items-center">
-            <div class="col-xl-7 col-lg-8 col-md-7">
-                <div class="footer-copy-right">
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                        All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i>
-                        by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        <div class="container">
+            <hr style="border: 1px solid black">
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-6 col-md-6">
+
+                    <div class="login_part_form">
+                        <div class="login_part_form_iner">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4> Contact Us</h4>
+                                </div>
+                                <form class="row contact_form" action="{{route('contact.us')}}" method="POST">
+                                    <div class="col-md-12 form-group p_star" data-validate="Name is required">
+                                        <input class="form-control" type="text" name="name" placeholder="Name" required>
+                                    </div>
+
+                                    <div class="col-md-12 form-group p_star"
+                                         data-validate="Valid email is required: ex@abc.xyz">
+                                        <input class="form-control" type="email" name="email"
+                                               placeholder="Adress mail" required>
+                                    </div>
+
+                                    <div class="col-md-12 form-group p_star" data-validate="Message is required">
+                                        <textarea class="form-control" name="text"
+                                                  placeholder="Your Message" required></textarea>
+                                    </div>
+                                    <div style="margin-left:50px">
+                                        <button class="btn-primary">
+                                            Send Your Message
+                                        </button>
+                                    </div>
+                                    @csrf
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#"> Offers & Discounts</a></li>
+                                <li><a href="#"> Get Coupon</a></li>
+                                <li><a href="#"> Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="#">Frequently Asked Questions</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Report a Payment Issue</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-xl-5 col-lg-4 col-md-5">
-                <div class="footer-copy-right f-right">
-                    <!-- social -->
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-behance"></i></a>
-                        <a href="#"><i class="fas fa-globe"></i></a>
+            <div class="footer-area footer-padding">
+                <!-- Footer bottom -->
+                <div class="row align-items-center">
+                    <div class="col-xl-7 col-lg-8 col-md-7">
+                        <div class="footer-copy-right">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                                All rights reserved | <i class="fa fa-heart"
+                                                         aria-hidden="true"></i>
+                                by <a href="{{route('home')}}" target="_blank">Luggage Rental</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-4 col-md-5">
+                        <div class="footer-copy-right f-right">
+                            <!-- social -->
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-behance"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
