@@ -84,7 +84,7 @@
                         </form>
                         <div style="float: right">
                             <a href="/updatebuyview/{{$buy->id}}">
-                                <button class="btn btn-primary" style="font-family: 'Cambria';">
+                                <button class="btn btn-primary" style="background-color: black; font-family: 'Cambria';">
                                     Edit
                                 </button>
                             </a>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
                 @empty
-                    <div class="card bg-secondary shadow" style="border-color: #f6f3f3">
+                    <div class="col-xl-8 order-xl-1" style="border-color: #f6f3f3">
                         <div class="card-header1">
                             <div class="row align-items-center">
                                 <div class="col-8">
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                         <br>
-                        <div class="col-md-12 col-lg-10">
+                        <div class="col-md-8 col-lg-8">
                             <center>
                                 <figure class=" col-md-8 col-lg-6" style="text-align: center ">
                                     <img src="{{asset('assets/images/sanfur.png')}}" alt="Empty" style="width: 100%;">

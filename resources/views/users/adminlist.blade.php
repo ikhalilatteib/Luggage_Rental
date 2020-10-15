@@ -4,7 +4,7 @@
         <br><br>
         <div >
             <center>
-                <h1 class="caplist" >Kullancılar Listesi</h1>
+                <h1 class="caplist" >Users List</h1>
                 <br>
                 <table class="tablist">
 

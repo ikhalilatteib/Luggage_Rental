@@ -25,9 +25,6 @@
                     <div class="col-8">
                         <h3 class="mb-0">My account</h3>
                     </div>
-                    <div class="col-4 text-right">
-                        <a href="#!" class=" btn-primary">Edit</a>
-                    </div>
                 </div>
             </div>
             <div class="card-body" style="background-color: white" >
@@ -80,7 +77,7 @@
                 <br>
                 <div style="float: right">
                     <a href="/guncelle/{{$user->id}}">
-                        <button class="btn btn-primary" style="font-family: 'Cambria';">
+                        <button class="btn btn-primary" style="background-color:black;font-family: 'Cambria';">
                             Edit
                         </button>
                     </a>

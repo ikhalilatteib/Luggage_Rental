@@ -28,7 +28,6 @@ Route::get('/chek','NewController@userOnlineStatus');
 Route::get('sil/{id}','NewController@delete')->where(array('id'=>'[0-9]+'));
 Route::get('/buy','BuyController@buyView')->name('sale');
 Route::post('/buydone','BuyController@buy')->name('sale.done');
-Route::get('/waiting','BuyController@Waiting')->name('waiting');
 Route::post('/approve/{id}','BuyController@adminUpdate')->name('approve')->where(array('id'=>'[0-9]+'));
 Route::get('/detail/{id}','BuyController@details')->where(array('id'=>'[0-9]+'))->name('details');
 Route::get('/updatebuyview/{id}','BuyController@updatebuyView')->where(array('id'=>'[0-9]+'))->name('updatebuy.view');
@@ -47,7 +46,7 @@ Route::post('/sender/{id}','MessageController@Chat')->name('sender');
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 
                     /* Admin Surface */
 Route::group(['middleware'=>['role:superadministrator']],function (){
@@ -57,6 +56,7 @@ Route::group(['middleware'=>['role:superadministrator']],function (){
     Route::get('/adminlist','AdminController@adminlist')->name('users.list');
     Route::get('/adminadd','AdminController@adminadd')->name('add.users');
     Route::get('/now','AdminController@now')->name('now');
+    Route::get('/waiting','BuyController@Waiting')->name('waiting');
     Route::get('/saleapp','AdminController@approveSales')->name('approve.sales');
     Route::get('/saleunap','AdminController@Unapprove')->name('unapprove');
     Route::get('/saledel','AdminController@DeleteSale')->name('deleted.sale');

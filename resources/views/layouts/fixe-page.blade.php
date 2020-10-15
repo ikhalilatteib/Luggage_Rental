@@ -36,7 +36,7 @@
                     <!-- Logo -->
                     <div class="logo">
                         <a href="/"><img src="{{asset('assets/img/logo/Luggage_Rental.png')}}" alt="Luggage Rental"
-                                         width="350"
+                                         width="320"
                                          style="padding-top: 0"></a>
                     </div>
                     <!-- Main-menu -->
@@ -98,8 +98,6 @@
                                                 <a class="dropdown-item" href="/mysale/{{Auth::user()->id}}"><i
                                                         data-feather="mail"></i>
                                                     My Sales</a>
-                                                <a class="dropdown-item" href="#"><i data-feather="mail"></i>
-                                                    Settings</a>
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                                    onclick="event.preventDefault();
@@ -162,8 +160,8 @@
                                         <textarea class="form-control" name="text"
                                                   placeholder="Your Message" required></textarea>
                                     </div>
-                                    <div style="margin-left:50px">
-                                        <button class="btn-primary">
+                                    <div style="margin-left:50px; background-color: red;">
+                                        <button class="" style="background-color: red; border-color: #ea0000">
                                             Send Your Message
                                         </button>
                                     </div>
@@ -212,7 +210,7 @@
                                 Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                                 All rights reserved | <i class="fa fa-heart"
                                                          aria-hidden="true"></i>
-                                by <a href="{{route('home')}}" target="_blank">Luggage Rental</a>
+                                by <a href="{{route('home')}}">Luggage Rental</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>

@@ -68,9 +68,8 @@
                              aria-labelledby="notificationDropdown">
                             <a class="dropdown-item preview-item" href="/profile/{{Auth::user()->id}}"> <i
                                     class="icon-head"></i> Account</a>
-                            <a class="dropdown-item preview-item" href="{{route('contact')}}"><i class="icon-mail"></i> Messages</a>
-                            <a class="dropdown-item" href="#"><i class="icon-cog"></i> Settings</a>
-
+                            <a class="dropdown-item preview-item" href="{{route('contact')}}"><i class="icon-mail"></i>
+                                Messages</a>
                             <a class="dropdown-item preview-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -97,7 +96,7 @@
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: red">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: white ">
             <div class="user-profile">
                 <div class="user-image">
                     <img src="{{asset('uploads/admin/admin_5f85f9b08f407.jpg')}}" alt="admin">
@@ -105,7 +104,7 @@
                 <div class="user-name" style="color:black;">
                     I.KHALIL ATTEIB YACOUB
                 </div>
-                <div class="user-designation">
+                <div class="user-designation" style="color:black;">
                     Administrator
                 </div>
             </div>
@@ -117,7 +116,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                    <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth"
+                       style="border-top: 1px solid red ">
                         <i class="icon-head menu-icon"></i>
                         <span class="menu-title">Basic Action</span>
                         <i class="menu-arrow"></i>
@@ -126,13 +126,14 @@
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item"><a class="nav-link" href="{{route('create')}}"> Add Admin </a></li>
                             <li class="nav-item"><a class="nav-link" href="{{route('add.users')}}"> Add User </a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{route('users.list')}}"> Uploads/Deletes </a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('users.list')}}">
+                                    Uploads/Deletes </a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                       aria-controls="ui-basic">
+                       aria-controls="ui-basic" style="border-top: 1px solid red">
                         <i class="icon-disc menu-icon"></i>
                         <span class="menu-title">Sales Operations</span>
                         <i class="menu-arrow"></i>
@@ -158,7 +159,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" style="border-top: 1px solid red">
                         <i class="icon-pie-graph menu-icon"></i>
                         <span class="menu-title">Charts</span>
                     </a>
@@ -187,7 +188,7 @@
             <footer class="footer">
                 <div class="d-sm-flex justify-content-center justify-content-sm-between">
                     <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a
-                            href="{{route('home')}}" target="_blank" class="text-muted">Luggage Rental</a>. All rights reserved.</span>
+                            href="{{route('home')}}" >Luggage Rental</a>. All rights reserved.</span>
                 </div>
             </footer>
             <!-- partial -->

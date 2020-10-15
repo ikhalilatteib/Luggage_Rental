@@ -71,7 +71,7 @@
                                                 <label class="form-check-label">
                                                     <input type="radio" class="form-check-input" name="is_approve"
                                                            style="font-size: 15px;background-color: blue;"
-                                                           value="1"><font
+                                                           value="1" required><font
                                                         style="font-size: 15px;color: blue;"> Approve</font>
                                                 </label>
                                             </div>
