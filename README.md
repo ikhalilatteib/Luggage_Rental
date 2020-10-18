@@ -1,4 +1,4 @@
-<p align="center"><a href="http://luggagerent.epizy.com" target="_blank"><img src="http://luggagerent.epizy.com/assets/img/logo/Luggage_Rental.png" width="400"></a></p>
+<p align="center"><a href="http://luggagerent.epizy.com" target="_blank"><img src="http://luggagerent.epizy.com/assets/img/logo/Luggage_Rental.png" width="400" alt="Luggage Rental"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
