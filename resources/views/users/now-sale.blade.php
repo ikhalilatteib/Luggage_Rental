@@ -96,11 +96,30 @@
                                     <i class="mdi mdi-file-check btn-icon-append"></i>
                                 </button>
                             </a>
-                            <a href="/deletebuy/{{$buy->id}}">
+                            <a data-toggle="modal" data-target="#exampleModalCenter" href="/deletebuy/{{$buy->id}}">
                                 <button class="btn btn-danger" style="font-family: 'Cambria';">
                                     Delete
                                 </button>
                             </a>
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle" style="color: black; font-size: 20px; font-family: Roboto;">Profile</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body" style="color: black; font-size: 18px; font-family: Roboto;">
+                                            Are are sure to delete this is sale?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-dark" data-dismiss="modal" style="background-color: black">Cancel</button>
+                                            <a href="/deletebuy/{{$buy->id}}"> <button type="button" class="btn btn-danger">Delete</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <br>
                         <br>

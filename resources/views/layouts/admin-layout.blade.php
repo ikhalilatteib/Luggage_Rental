@@ -20,6 +20,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{{asset('admin/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/ozel.css')}}">
+
     <!-- endinject -->
     <link rel="shortcut icon" href="{{asset('assets/img/hero/LR.png')}}"/>
 </head>
@@ -128,6 +129,8 @@
                             <li class="nav-item"><a class="nav-link" href="{{route('add.users')}}"> Add User </a></li>
                             <li class="nav-item"><a class="nav-link" href="{{route('users.list')}}">
                                     Uploads/Deletes </a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('deleted.user')}}">
+                                    deleted accounts </a></li>
                         </ul>
                     </div>
                 </li>

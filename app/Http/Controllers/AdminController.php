@@ -109,4 +109,10 @@ class AdminController extends Controller
         return view('users.delete-buy',compact('buys'));
     }
 
+    public function deletedAcount()
+    {
+        $users = DB::table('users')->where('deleted_at','!=',null)->get();
+        return view('users.deleted-account',compact('users'));
+    }
+
 }
