@@ -1,3 +1,4 @@
+
 <?php
 
 namespace App\Http\Controllers;
@@ -12,7 +13,7 @@ use Illuminate\Support\Facades\Mail;
 
 class BuyController extends Controller
 {
-    
+
     public function buyView()
     {
         return view('utilisateurs.buy');

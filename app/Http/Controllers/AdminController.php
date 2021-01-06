@@ -6,15 +6,35 @@ use App\Admin;
 use App\Buy;
 use App\Helpers\UploadPaths;
 use App\User;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
+    use AuthenticatesUsers;
 
+    protected $redirectTo = '/login';
     /* Add Admin */
+    public function __construct()
+    {
+        $this->middleware('guest:admin')->except('logout');
+    }
+
+    public function showLoginForm()
+    {
+        return view('admin.login');
+    }
+
+
+
+    public function guard()
+    {
+        return Auth::guard('admin');
+    }
 
     public function CreateView()
     {

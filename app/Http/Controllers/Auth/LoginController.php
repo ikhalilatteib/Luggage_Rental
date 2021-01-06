@@ -33,11 +33,7 @@ class LoginController extends Controller
         if($user->hasRole('superadministrator')){
             return redirect('/dashbord');
         }
-
-
             return redirect('/');
-
-
     }
 
     /**

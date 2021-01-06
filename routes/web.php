@@ -33,7 +33,8 @@ Route::group(['middleware' => ['auth']], function () {
 
 Auth::routes();
 
-
+Route::get('/login-admin','AdminController@showLoginForm')->name('admin');
+Route::post('/login-admin','AdminController@Login')->name('login.admin');
 
 /* home*/
 Route::get('/', 'HomeController@index')->name('home');
@@ -66,3 +67,4 @@ Route::group(['middleware' => ['role:superadministrator']], function () {
 Route::post('/contactus', 'NewController@contactUs')->name('contact.us');
 
 
+Route::get('/send','SMSController@sendPassword');
