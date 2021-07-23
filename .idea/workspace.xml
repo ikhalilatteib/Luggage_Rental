@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f9c965e-e145-40cf-898b-e53c06ce176a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/luggage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/luggage.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +287,7 @@
       <workItem from="1608451432979" duration="740000" />
       <workItem from="1608702305790" duration="920000" />
       <workItem from="1608732996281" duration="6949000" />
-      <workItem from="1611130941804" duration="1110000" />
+      <workItem from="1611130941804" duration="1719000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1600116541557</created>
@@ -369,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602766430682</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update">
+      <created>1611132537981</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611132537981</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +400,8 @@
     <MESSAGE value="added Approved_date" />
     <MESSAGE value="Systeme Complet" />
     <MESSAGE value="Admin panel Color" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin panel Color" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
